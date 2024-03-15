@@ -17,6 +17,19 @@
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
 //
+//Cypress.Commands.add('loginToMagento',(email,password)=>{
+  //  cy.visit("/customer/account/login/");
+    //cy.get("#email").type(email)
+    //cy.get("#pass").type(password)
+    //cy.get("#send2").click();
+//})
+Cypress.Commands.add("login",(email,password)=>{
+
+    cy.visit("https://admin-demo.nopcommerce.com/login");
+
+    cy.get("[type=submit]").click()
+})
+
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
 //
